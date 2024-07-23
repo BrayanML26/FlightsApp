@@ -82,8 +82,8 @@ namespace FlightAPP
 
             // Datos de la reserva
             int flightId = 8; // ID del vuelo reservado 
-            string passengerName = "Brayan "; // Nombre del pasajero 
-            string passengerEmail = "brayan@gmail.com"; // Correo electrónico del pasajero 
+            string passengerName = "example "; // Nombre del pasajero 
+            string passengerEmail = "example@gmail.com"; // Correo electrónico del pasajero 
 
             // Conexión a la base de datos 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -210,12 +210,12 @@ namespace FlightAPP
                 SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("brayan@gmail.com", ""),
+                    Credentials = new NetworkCredential("example@gmail.com", ""),
                     EnableSsl = true,
                 };
 
                 // Construir el mensaje de correo electrónico
-                MailMessage mailMessage = new MailMessage("brayan@gmail.com", passengerEmail)
+                MailMessage mailMessage = new MailMessage("example@gmail.com", passengerEmail)
                 {
                     Subject = "Confirmación de reserva",
                     Body = "Su reserva ha sido confirmada. Gracias por elegir nuestros servicios."
